@@ -43,6 +43,6 @@ The following user/developer stories detail the major functionality for this pha
 
 ## **UML DIAGRAM PHASE-1**
 
-![UML](1.PNG)
+![UML](https://github.com/farahalwahaibi/stoRefont/blob/main/storefront/1.PNG)
 
 
