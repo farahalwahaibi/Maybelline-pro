@@ -16,9 +16,9 @@ The following user/developer stories detail the major functionality for this pha
 
 ### **Author: Farah AlWahaibi**
 
-* [PR LINK1](https://github.com/farahalwahaibi/todo/pull/1)
-* [PR LINK2](https://github.com/farahalwahaibi/todo/pull/2)
-* [PR LINK3](https://github.com/farahalwahaibi/todo/pull/3)
+* [PR LINK1](https://github.com/farahalwahaibi/stoRefont/pull/1)
+* [PR LINK2](https://github.com/farahalwahaibi/stoRefont/pull/2)
+* [PR LINK3](https://github.com/farahalwahaibi/stoRefont/pull/3)
 
 
 ### **Installation**
