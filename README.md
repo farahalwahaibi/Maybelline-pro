@@ -20,7 +20,7 @@ The following user/developer stories detail the major functionality for this pha
 * [PR LINK2](https://github.com/farahalwahaibi/stoRefont/pull/2)
 * [PR LINK3](https://github.com/farahalwahaibi/stoRefont/pull/3)
 * [PR LINK4](https://github.com/farahalwahaibi/stoRefont/pull/4)
-* [PR LIN5](https://github.com/farahalwahaibi/stoRefont/pull/5)
+* [PR LINk 5](https://github.com/farahalwahaibi/stoRefont/pull/5)
 
 
 
