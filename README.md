@@ -43,6 +43,6 @@ The following user/developer stories detail the major functionality for this pha
 
 ## **UML DIAGRAM PHASE-1**
 
-![UML](1.PNG)
+![UML](1.png)
 
 
