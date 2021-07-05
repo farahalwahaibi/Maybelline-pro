@@ -5,7 +5,7 @@ import catReducer from './categories.js';
 import productReducer from './products.js';
 
 //combine reducer
-let reducers = combineReducers({ category: catReducer },{ product: productReducer });
+let reducers = combineReducers({ category: catReducer ,product: productReducer });
 
 
 //create store
