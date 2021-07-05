@@ -1,30 +1,26 @@
-'use strict';
-
 //initial state
 let catInitialState = {
     categories: [
         {normalizedName: 'Food', displayName: 'Food', description: 'food is the best'},
         {normalizedName: 'Electronics', displayName: 'Electronics', description: 'electronics is the best'},
     ],
-    active: false,
+    active: null,
 }
 
 //the reducer 
-export default (state = catInitialState, action) => {
+const catReducer = (state = catInitialState, action) => {
     let {type, payload} = action;
 
     switch (type) {
         case 'ACTIVE':
-            let activeCat = ! state.active;
-            let renderCat = state.categories.map(category =>{
+            let categories = state.categories.map(category =>{
                 if(category.normalizedName===payload){
-                    let result1 = {displayName: 'Food', description: 'food is the best'};
-                    let result2 = state.categories.normalizedName;
-                    return result1 + result2 ;
+                    let result1 = category;
+                    return result1 ;
                 }
                 return category;
             });
-            return {activeCat, renderCat};
+            return {activeCat:payload, categories};
 
         case 'RESET':
             return catInitialState; 
@@ -50,3 +46,6 @@ export const reset = () => {
         type: 'RESET',
     }
 }
+
+
+export default catReducer;

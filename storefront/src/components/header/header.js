@@ -1,16 +1,14 @@
-'use strict';
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Button,Paper,Tab,AppBar } from '@material-ui/core';
 
 const Header = (props) =>{
     return (
         <>
-        <nav>        
-                 <Link to="/">OUR STORE</Link>
-                 <Link to="/cart">CART(0)</Link>          
-        </nav>
+        <Paper> 
+        <Button><Link to="/"><Tab label="OUR STORE" /></Link></Button>
+        <Button><Link to="/cart"><Tab label="CART(0)" /></Link></Button>
+        </Paper>
         </>
     )
 }
