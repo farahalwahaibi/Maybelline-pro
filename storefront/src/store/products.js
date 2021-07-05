@@ -1,13 +1,13 @@
 //initial state
 let productInitialState = {
     products: [
-        {categoryAssociation:'Food',name:'Calzones',description:'Calzones', price:'10', inventoryCount:'4'},
-        {categoryAssociation:'Food',name:'Kiwi',description:'Kiwi', price:'1.5', inventoryCount:'10'},
-        {categoryAssociation:'Electronics',name:'1TB USB',description:'1TB USB',price:'17', inventoryCount:'7'},
-        {categoryAssociation:'Electronics',name:'Monitor',description:'Monitor', price:'150',  inventoryCount:'5'},
-        {categoryAssociation:'Electronics',name:'Mouse',description:'Mouse', price:'8', inventoryCount:'3'},   
+        {categoryAssociation:'Food',name:'Calzones',description:'Calzones', price:'10$', inventoryCount:'4'},
+        {categoryAssociation:'Food',name:'Kiwi',description:'Kiwi', price:'1.5$', inventoryCount:'10'},
+        {categoryAssociation:'Electronics',name:'1TB USB',description:'1TB USB',price:'17$', inventoryCount:'7'},
+        {categoryAssociation:'Electronics',name:'Monitor',description:'Monitor', price:'150$',  inventoryCount:'5'},
+        {categoryAssociation:'Electronics',name:'Mouse',description:'Mouse', price:'8$', inventoryCount:'3'},   
     ],
-    active: false,
+    renderProducts: [],
 }
 
 //the reducer 
@@ -16,16 +16,12 @@ const productReducer =  (state = productInitialState, action) => {
 
     switch (type) {
         case 'ACTIVE':
-            let activeProducts = ! state.active;
-            let renderProducts = state.products.map(product =>{
-                if(product.categoryAssociation===payload){
-                    let result = {categoryAssociation: product.categoryAssociation, name: product.name, description:product.description, price: product.price, inventoryCount: product.inventoryCount};
-                    return result ;
-                }
-                return product;
-            });
-            return {activeProducts, renderProducts};
-        
+            let pay =payload;
+            let renderProducts = state.products.filter((product) =>{
+                    return product.categoryAssociation === pay ;
+                });
+                return {...state, renderProducts}
+                
         case 'RESET':
             return productInitialState; 
             
@@ -35,9 +31,9 @@ const productReducer =  (state = productInitialState, action) => {
 }
 
 
-//action
-//1st action for active
-export const active = (products) => {
+// action
+// 1st action for active
+export const activePro = (products) => {
     return {
         type: 'ACTIVE',
         payload: products,
@@ -45,7 +41,7 @@ export const active = (products) => {
 }
 
 //2nd action for reset
-export const reset = () => {
+export const resetPro = () => {
     return {
         type: 'RESET',
     }
