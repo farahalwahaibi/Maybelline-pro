@@ -1,17 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button,Paper,Tab,AppBar } from '@material-ui/core';
+import { Button,Typography,AppBar,Toolbar,Grid} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
 
+const useStyles = makeStyles((theme) => ({
+    toolbar: {
+      background: '#ffffff',
+      padding: theme.spacing(2),
+    },
+    cart: {
+      alignSelf: "center",
+      textAlign: "right",
+      color: "#eee",
+    },
+    appBar: {
+      zIndex: 1000
+    },
+  }));
+  
 const Header = (props) =>{
+    const classes = useStyles();
     return (
         <>
-        <Paper> 
-        <Button><Link to="/"><Tab label="OUR STORE" /></Link></Button>
-        <Button><Link to="/cart"><Tab label="CART(0)" /></Link></Button>
-        </Paper>
+        <AppBar className={classes.appBar} position="relative">
+        <Toolbar className={classes.toolbar}>
+        <Grid container>
+        <Grid item xs>
+        <Button component={Link} to="/"><Typography variant="h3" component="h3">OUR STORE</Typography></Button>
+        </Grid>
+        <Grid item xs className={classes.cart}>
+        <Button component={Link} to="/cart" >CART ({props.totalAdd})</Button>
+        </Grid>
+        </Grid>
+        </Toolbar>
+        </AppBar>
         </>
     )
 }
 
+const mapStateToProps = state => ({
+  totalAdd : state.cart.addition,
+})
 
-export default Header ;
+export default connect (mapStateToProps)(Header);
+
+// export default Header ;

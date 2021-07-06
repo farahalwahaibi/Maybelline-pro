@@ -1,8 +1,8 @@
 //initial state
 let catInitialState = {
     categories: [
-        {normalizedName: 'Food', displayName: 'Food', description: 'Category Description Goes Here'},
-        {normalizedName: 'Electronics', displayName: 'Electronics', description: 'Category Description Goes Here'},
+        {normalizedName: 'Sweet', displayName: 'Sweet', description: 'Description Goes Here'},
+        {normalizedName: 'Drinks', displayName: 'Drinks', description: 'Description Goes Here'},
     ],
     active: null,
 }
