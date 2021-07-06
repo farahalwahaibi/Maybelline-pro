@@ -4,7 +4,7 @@ import { remove } from '../../store/cart.js';
 import './simplecart.scss';
 
 
-const CurrentCart = (props) =>{
+const SimpleCart = (props) =>{
     let result = props.activeCart.cart;
     console.log(result,'resultt');
     if(result.length>0){
@@ -32,4 +32,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = { remove };
 
-export default connect (mapStateToProps,mapDispatchToProps)(CurrentCart);
+export default connect (mapStateToProps,mapDispatchToProps)(SimpleCart);

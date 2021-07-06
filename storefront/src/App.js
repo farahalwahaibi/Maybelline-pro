@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../src/components/header/header.js';
-import CurrentCart from '../src/components/cart/simplecart.js'
+import SimpleCart  from '../src/components/cart/simplecart.js'
 import Categories from '../src/components/storefront/categories.js';
 import Products from '../src/components/storefront/products.js';
 import CurrentCat from '../src/components/storefront/current-category';
@@ -15,7 +15,7 @@ function App() {
     <Router>
     <>
     <Header/>
-    <CurrentCart/>
+    <SimpleCart/>
     <Switch>
       <Route exact path="/" />
       <Route  exact path="/cart" component={Cart} />
