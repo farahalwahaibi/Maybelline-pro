@@ -3,7 +3,7 @@
 ### **Author: Farah AlWahaibi**
 
 ### **Front-End**
-* [STOREFRONT](https://sweetheart-2021.netlify.app/)
+* [STORE_FRONT App](https://sweetheart-2021.netlify.app/)
 
 ## **Redux**
 
