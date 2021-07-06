@@ -1,11 +1,12 @@
 //initial state
 let productInitialState = {
     products: [
-        {categoryAssociation:'Food',name:'Calzones',description:'Calzones', price:'10$', inventoryCount:'4'},
-        {categoryAssociation:'Food',name:'Kiwi',description:'Kiwi', price:'1.5$', inventoryCount:'10'},
-        {categoryAssociation:'Electronics',name:'1TB USB',description:'1TB USB',price:'17$', inventoryCount:'7'},
-        {categoryAssociation:'Electronics',name:'Monitor',description:'Monitor', price:'150$',  inventoryCount:'5'},
-        {categoryAssociation:'Electronics',name:'Mouse',description:'Mouse', price:'8$', inventoryCount:'3'},   
+        {categoryAssociation:'Sweet',name:'Chocolate Cake',description:'Product Description Goes Here', price:'10$', inventoryCount:4},
+        {categoryAssociation:'Sweet',name:'Macaron',description:'Product Description Goes Here', price:'1.5$', inventoryCount:10},
+        {categoryAssociation:'Sweet',name:'Cheesecake',description:'Product Description Goes Here', price:'1.5$', inventoryCount:10},
+        {categoryAssociation:'Drinks',name:'Cappuccino',description:'Product Description Goes Here',price:'17$', inventoryCount:7},
+        {categoryAssociation:'Drinks',name:'Lemonade',description:'Product Description Goes Here', price:'150$',  inventoryCount:5},
+        {categoryAssociation:'Drinks',name:'Hot Chocolate',description:'Product Description Goes Here', price:'8$', inventoryCount:3},   
     ],
     renderProducts: [],
 }
