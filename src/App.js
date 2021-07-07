@@ -17,12 +17,12 @@ function App() {
     <Header/>
     <SimpleCart/>
     <Switch>
-      <Route exact path="/" />
+      <Route exact path="/"  ><Categories/> <Products/>  </Route>
       <Route  exact path="/cart" component={Cart} />
     </Switch>
-    <Categories/> 
+    {/* <Categories/>  */}
     <CurrentCat/>
-    <Products/> 
+    {/* <Products/>  */}
     <Footer/>
     </>
     </Router>
