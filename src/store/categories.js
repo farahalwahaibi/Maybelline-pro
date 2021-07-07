@@ -1,8 +1,8 @@
 //initial state
 let catInitialState = {
     categories: [
-        {normalizedName: 'Sweet', displayName: 'Sweet', description: 'Description Goes Here'},
-        {normalizedName: 'Drinks', displayName: 'Drinks', description: 'Description Goes Here'},
+        // {normalizedName: 'Sweet', displayName: 'Sweet', description: 'Description Goes Here'},
+        // {normalizedName: 'Drinks', displayName: 'Drinks', description: 'Description Goes Here'},
     ],
     active: null,
 }
@@ -13,9 +13,9 @@ const catReducer = (state = catInitialState, action) => {
 
     switch (type) {
         case 'ACTIVE':
-            let desc = '';
+            let desc = 'Description Goes Here';
             let categories = state.categories.map(category =>{
-                if(category.normalizedName===payload){
+                if(category===payload){
                     let result1 = category;
                     desc = result1.description;
                     return result1 ;
@@ -26,6 +26,18 @@ const catReducer = (state = catInitialState, action) => {
 
         case 'RESET':
             return catInitialState; 
+
+        case 'get':
+            let result = [];
+            for (let category of payload) {
+                if (!result.includes(category.product_type)) {
+                    result.push(category.product_type);
+                }
+              }
+              return {
+                categories: [...result],
+                active: state.active,
+              };    
             
         default:
             return state;

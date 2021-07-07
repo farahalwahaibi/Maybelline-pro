@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 const CurrentCat = (props) =>{
     const classes = useStyles();
-    console.log(props);
+    console.log(props, 'current');
     
         return (
             <>

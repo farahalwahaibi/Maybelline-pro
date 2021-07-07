@@ -16,10 +16,10 @@ const Footer = (props) =>{
         <>
         <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-                &copy; 2021 Javascript 401
+                &copy; 2021 MayBelline Products
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" >        
-                <p>React + Redux + Material UI</p>
+        <Typography variant="text" align="center" color="textSecondary" >        
+                <p>FARAH WAHAIBI</p>
         </Typography>
         </footer>
         </>
