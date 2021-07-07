@@ -4,7 +4,9 @@ let catInitialState = {
         // {normalizedName: 'Sweet', displayName: 'Sweet', description: 'Description Goes Here'},
         // {normalizedName: 'Drinks', displayName: 'Drinks', description: 'Description Goes Here'},
     ],
+    productsType: [],
     active: null,
+    activeProd: null,
 }
 
 //the reducer 
@@ -30,15 +32,27 @@ const catReducer = (state = catInitialState, action) => {
         case 'get':
             let result = [];
             for (let category of payload) {
-                if (!result.includes(category.product_type)) {
-                    result.push(category.product_type);
+                if (!result.includes(category.brand)) {
+                    result.push(category.brand);
                 }
               }
               return {
                 categories: [...result],
                 active: state.active,
               };    
-            
+        
+              case 'getPro':
+                let result2 = [];
+                for (let category of payload) {
+                    if (!result2.includes(category.product_type)) {
+                        result2.push(category.product_type);
+                    }
+                  }
+                  return {
+                    productsType: [...result2],
+                    activeProd: state.activeProd,
+                };      
+        
         default:
             return state;
     }

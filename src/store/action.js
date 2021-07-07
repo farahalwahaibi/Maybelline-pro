@@ -1,6 +1,6 @@
 //import superagent
 import superagent from 'superagent';
-const API = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+const API = 'https://makeup-api.herokuapp.com/api/v1/products.json';
 
 //1st for get data from server
 export const getData = ()=> (dispatch,state)=>{
@@ -18,6 +18,20 @@ export const getAction = payload => {
     }
 }
 
+export const getAllData = (brand)=> (dispatch,state)=>{
+    return superagent.get(`${API}?brand=${brand}`)
+    .then(res=>{
+        dispatch(getAction(res.body));
+    })
+}
+
+//Action for get data :
+export const getProAction = payload => {
+    return {
+        type: 'getPro',
+        payload: payload,
+    }
+}
 //**************************************************************************//
 
 //2nd for add product to cart

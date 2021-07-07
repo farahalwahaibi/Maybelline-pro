@@ -12,8 +12,8 @@ import Cart from '../src/components/cart/order.js';
 
 function App() {
   return (
-    <Router>
     <>
+    <Router>
     <Header/>
     <SimpleCart/>
     <Switch>
@@ -24,8 +24,8 @@ function App() {
     <CurrentCat/>
     <Products/> 
     <Footer/>
-    </>
     </Router>
+    </>
   )
 }
 

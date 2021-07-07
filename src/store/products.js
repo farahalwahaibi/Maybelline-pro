@@ -27,6 +27,7 @@ const productReducer =  (state = productInitialState, action) => {
             console.log(payload, 'pppppppppppppppppppppppp');
             return {products:payload, renderProducts:[]}; 
             
+            
         default:
             return state;
     }

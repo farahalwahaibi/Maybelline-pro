@@ -5,7 +5,7 @@ import { activePro, resetPro } from '../../store/products';
 // import { activePro, resetPro } from '../../store/products.js';
 import { Button ,Typography} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { getData } from '../../store/action.js';
+import { getData, getProAction } from '../../store/action.js';
 import { useEffect } from "react";
 
 
@@ -31,7 +31,7 @@ const Categories = props => {
             <Typography variant="h5">Browse Our Products</Typography>
             <ul>
                 {props.allCategories.categories.map((category,idx) =>
-                    <Button variant="text" color="primary" onClick={() => props.activePro(category)} key={idx}>{category}</Button>)} 
+                    <Button variant="text" color="primary" onClick={() => props.getProAction(category)} key={idx}>{category}</Button>)} 
             </ul>
         </section>
         </>
@@ -43,6 +43,6 @@ const mapStateToProps = state => ({
     allCategories: state.category,
     // allProducts: state.product
 })
-const mapDispatchToProps = { activePro, resetPro, getData};
+const mapDispatchToProps = { activePro, resetPro, getData, getProAction};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Categories);

@@ -30,16 +30,29 @@ const useStyles = makeStyles((theme) => ({
 const CurrentProducts = (props) =>{
     const classes = useStyles();
     console.log(props,'*********************');
+    console.log(props.pro,'pro*********************');
+    console.log(props.activePro,'actpro*********************');
     
     return (
         <>
         <Container className={classes.cardGrid} >
         <Grid container spacing={4}>
         
-            {props.activePro.map((product)=>{
+            {props.pro.map((product)=>{
+              // {product.map((pro)=>{
                 return(
-        <Grid item key={product.name}  md={4}>
-            <Card className={classes.card}>
+                  <Button >{product.product_type}</Button>
+                
+              )
+          //   })
+          // }
+                // return(
+                  
+        // <Grid item key={product.product_type}  md={4}>
+        
+        
+        // <Button variant="text" color="primary" onClick={() => props.getProAction(category)} key={idx}>{category}</Button>
+            /* <Card className={classes.card}>
                 <CardMedia className={classes.cardImg} image={product.image_link}/>
                 <CardContent>
                         <Typography  variant="h6">{product.name}</Typography>
@@ -51,16 +64,17 @@ const CurrentProducts = (props) =>{
                         <Button size="small" color="primary" onClick={() => props.add(product.name)}  key={product.name}>Add To Cart</Button>
                         <Button size="small" color="primary" >View Details</Button>
                 </CardActions>
-            </Card>
-        </Grid>
-                )
-            })}
+            </Card> */
+        // </Grid>
+                 
+            })
+          }
         
         </Grid>
         </Container>
         </>
          );
-};
+        }
 
 const mapStateToProps = state => ({
     pro : state.product.products,
