@@ -27,7 +27,7 @@ const Header = (props) =>{
         <Toolbar className={classes.toolbar}>
         <Grid container>
         <Grid item xs>
-        <Button component={Link} to="/"><Typography variant="h3" component="h3">OUR STORE</Typography></Button>
+        <Button component={Link} to="/"><Typography variant="h3" component="h3">OUR Maybelline STORE</Typography></Button>
         </Grid>
         <Grid item xs className={classes.cart}>
         <Button component={Link} to="/cart" >CART ({props.totalAdd})</Button>
