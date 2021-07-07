@@ -3,8 +3,8 @@
 ### **Author: Farah AlWahaibi**
 
 ### **Front-End**
-* [lab 36&37 frontend](https://sweetheart-2021.netlify.app/)
-* [lab 38 frontend](https://maybelline-2021.netlify.app/)
+* [Frontend](https://sweetheart-2021.netlify.app/)
+
 
 ## **Redux**
 
