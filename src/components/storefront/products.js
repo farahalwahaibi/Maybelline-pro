@@ -45,6 +45,7 @@ const CurrentProducts = (props) =>{
                         <Typography  variant="h6">{product.name}</Typography>
                         <Typography color="textSecondary">Price : {product.price}</Typography>
                         <Typography color="textSecondary">inStock : {product.id}</Typography>
+                        <Typography color="textSecondary">Rating : {product.rating}</Typography>
                 </CardContent>
                 <CardActions>
                         <Button size="small" color="primary" onClick={() => props.add(product.name)}  key={product.name}>Add To Cart</Button>
