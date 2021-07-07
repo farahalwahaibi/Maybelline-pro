@@ -2,6 +2,9 @@
 
 ### **Author: Farah AlWahaibi**
 
+### **Front-End**
+* [STORE_FRONT APP](https://sweetheart-2021.netlify.app/)
+
 ## **Redux**
 
 ### **LAB - 36**
@@ -97,6 +100,7 @@ Application Flow:
 ![UML](2.PNG)
 
 
+
 ***
 ***
 ***
@@ -131,4 +135,5 @@ The user stories from Phases 1 and 2 remain unchanged. For this phase, we are no
 ## **UML DIAGRAM PHASE-3**
 
 ![UML](3.PNG)
+
 
