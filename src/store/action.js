@@ -22,7 +22,7 @@ export const getAction = payload => {
 
 //2nd for add product to cart
 export const addProduct = (product)=> (dispatch,state)=>{
-    superagent.put(`${API}/${product._id}`)
+    superagent.put(`${API}&product_type=${product_type}`)
     .send({inStock:product.id-1})
     .then((res)=>{
         dispatch(addAction(res.body));
@@ -41,7 +41,7 @@ export const addAction = payload => {
 
 //3rd for delete product from cart 
 export const deleteProduct = (product)=> (dispatch,state)=>{
-    superagent.put(`${API}/${product._id}`)
+    superagent.put(`${API}&product_type=${product_type}`)
     .send({inStock:product.id+1})
     .then((res)=>{
         dispatch(deleteAction(res.body));
