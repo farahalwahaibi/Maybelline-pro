@@ -169,6 +169,6 @@ The user stories from Phases 1, 2 and 3 remain unchanged. For this phase, we are
 
 ## **UML DIAGRAM PHASE-4**
 
-![UML](4.PNG)
+![UML](https://raw.githubusercontent.com/farahalwahaibi/Readme/main/4.png?token=ASV4PGKS43SPJPKXVSDX5BLA4ZVBW)
 
 
