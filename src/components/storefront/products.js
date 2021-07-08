@@ -3,6 +3,10 @@ import {connect} from 'react-redux';
 import { add } from '../../store/cart.js';
 import {Button,CardActions,CardContent,CardMedia,Grid,Typography,Container,Card} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+// import { activePro, resetPro } from '../../store/products';
+import {Link} from 'react-router-dom';
+
+
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {
@@ -44,12 +48,11 @@ const CurrentProducts = (props) =>{
                 <CardContent>
                         <Typography  variant="h6">{product.name}</Typography>
                         <Typography color="textSecondary">Price : {product.price}</Typography>
-                        <Typography color="textSecondary">inStock : {product.id}</Typography>
                         <Typography color="textSecondary">Rating : {product.rating}</Typography>
                 </CardContent>
                 <CardActions>
                         <Button size="small" color="primary" onClick={() => props.add(product.name)}  key={product.name}>Add To Cart</Button>
-                        <Button size="small" color="primary" >View Details</Button>
+                        <Button size="small" color="primary" component={Link} to={`/detail/${product.id}`}>View Details</Button>
                 </CardActions>
             </Card>
         </Grid>
@@ -70,3 +73,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = { add };
 
 export default connect (mapStateToProps,mapDispatchToProps)(CurrentProducts);
+
+
+
