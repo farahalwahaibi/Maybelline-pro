@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     cardGrid: {
       paddingTop: theme.spacing(9),
       paddingBottom: theme.spacing(9),
-      marginLeft: '390px',
+      marginLeft: '370px',
         },
     card: {
     //   display: 'flex',

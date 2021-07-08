@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button,Typography,AppBar,Toolbar,Grid} from '@material-ui/core';
+import { Button,Typography,AppBar,Toolbar,Grid, ButtonLink} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 
@@ -30,7 +30,7 @@ const Header = (props) =>{
         <Button component={Link} to="/"><Typography variant="h3" component="h3">OUR Maybelline STORE</Typography></Button>
         </Grid>
         <Grid item xs className={classes.cart}>
-        <Button component={Link} to="/cart" >CART ({props.totalAdd})</Button>
+        <Button component={Link} to="/cart">CART ({props.totalAdd})</Button>
         </Grid>
         </Grid>
         </Toolbar>

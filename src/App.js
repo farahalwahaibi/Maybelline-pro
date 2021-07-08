@@ -18,13 +18,14 @@ function App() {
     <Header/>
     <SimpleCart/>
     <Switch>
-      <Route exact path="/"  />
-      <Route  exact path="/cart" component={Cart} />
-      <Route  exact path="/detail/:id" component={ViewDetails} />
-    </Switch>
+      <Route exact path="/"  >
     <Categories/> 
     <CurrentCat/>
     <Products/> 
+      </Route>
+      <Route  exact path="/cart" component={Cart} />
+      <Route  exact path="/detail/:id" component={ViewDetails} />
+    </Switch>
     <Footer/>
     </>
     </Router>
