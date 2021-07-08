@@ -1,6 +1,8 @@
 import React from 'react';
 import {TextField,Button,Typography,Paper,Container,Grid} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import {connect} from 'react-redux';
+
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {
@@ -25,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const Cart = (props) => {
+  // let total = 0;
+  console.log(props,'order here*************');
     const classes = useStyles();
 
     return (
@@ -33,10 +37,27 @@ const Cart = (props) => {
             <Container className={classes.cardGrid}>
                 <Paper className={classes.paper}>
             <h3>Order summary</h3>
-            <h4>Total $0.00</h4>
+            {props.totalAdd.cart.map((pro)=>{
+              return(
+              <li>{pro}</li>
+              )
+              
+            })}
+            {props.totalAdd.price.map((val)=>{
+                return (
+                  <p>{val}
+                  {/* <p>{total+=val}</p> */}
+                  </p>
+                )
+              })}
+            {/* <li>{props.totalAdd.cart}{props.totalAdd.price}</li> */}
+            <br></br>
+            <h4>Total:  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; $
+              {/* {total} */}
+              </h4>
             <Grid className={classes.card}>
             <Typography variant="h6">Billing Address</Typography>
-            <TextField type="text" label="Full Name"></TextField>
+            <TextField type="text" label="Full Name" name="full name"></TextField>
             <br></br>
             <TextField type="text" label="Address"></TextField>
             <br></br>
@@ -67,5 +88,13 @@ const Cart = (props) => {
     )
 }
 
+const mapStateToProps = state => ({
+  pro : state.product.renderProducts,
+  activePro : state.product,
+  allCategories: state.category,
+  totalAdd : state.cart,
+})
 
-export default Cart;
+export default connect (mapStateToProps)(Cart);
+
+// export default Cart;

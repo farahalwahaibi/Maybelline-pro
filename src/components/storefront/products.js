@@ -51,7 +51,7 @@ const CurrentProducts = (props) =>{
                         <Typography color="textSecondary">Rating : {product.rating}</Typography>
                 </CardContent>
                 <CardActions>
-                        <Button size="small" color="primary" onClick={() => props.add(product.name)}  key={product.name}>Add To Cart</Button>
+                        <Button size="small" color="primary" onClick={() => props.add(product)}  key={product}>Add To Cart</Button>
                         <Button size="small" color="primary" component={Link} to={`/detail/${product.id}`}>View Details</Button>
                 </CardActions>
             </Card>

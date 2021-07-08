@@ -4,6 +4,7 @@ import {Button,CardActions,CardContent,CardMedia,Grid,Typography,Container,Card}
 import { makeStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
 import { add } from '../../store/cart.js';
+import products from '../storefront/products.js';
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {
@@ -44,13 +45,13 @@ const ViewDetails = (props) =>{
                         <Typography  variant="h4" className={classes.textH}>{product.name}</Typography>
                         <Typography color="textSecondary">Product Type : {product.product_type}</Typography>
                         <Typography color="textSecondary">Price : {product.price}</Typography>
-                        <Typography color="textSecondary">inStock : {product.id}</Typography>
+                        <Typography color="textSecondary">in Stock : {product.id}</Typography>
                         <Typography color="textSecondary">Rating : {product.rating}</Typography>
-                        <Typography color="textPrimary">Description : {product.description}</Typography>
+                        <Typography color="textPrimary">{product.description}</Typography>
                 </CardContent>
                 <CardActions >
-                        <Button size="small" color="primary" onClick={() => props.add(product.name)}  key={product.name}>Add To Cart</Button>
-                        <Button size="small" color="primary" component={Link} to='/'>Back</Button>
+                        <Button size="small" color="primary" onClick={() => props.add(product)}  key={product.name}>Add To Cart</Button>
+                        <Button size="small" color="primary" component={Link} to='/'>Home</Button>
                 </CardActions>
             </Card>
         </Grid>
